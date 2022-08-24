@@ -52,16 +52,17 @@ table {
 html, body {
     height:100%;
     font-family: sans-serif;
+    overflow: hidden;
 }
 
 h1 {
-    font-size: 1em;
+    font-size: 1.2em;
 }
 
 .container {
     height: 100%;
     display: grid;
-    grid-template-columns: 25% 75%;
+    grid-template-columns: 20% 80%;
     grid-template-rows: 1fr;
 }
 
@@ -81,7 +82,7 @@ h1 {
 }
 
 .left-inner-panel-main {
-    font-size: 1.5em;
+    font-size: 2em;
     margin-left: -5px;
 }
 
@@ -92,7 +93,7 @@ h1 {
 }
 
 .left-inner-panel-submenu {
-    font-size: 1em;
+    font-size: 1.5em;
     margin-left: 5px;
 }
 
@@ -171,6 +172,10 @@ h1 {
     width: 45px;
 }
 
+.text-area-greetings {
+    font-size: 1.2em
+}
+
 .buttons-area {
     display: flex;
     justify-content: center;
@@ -183,8 +188,8 @@ h1 {
     background: #379df1;
     border: 0;
     width: 25%;
-    height: 30%;
-    border-radius: 15px;
+    height: 35%;
+    border-radius: 25px;
 }
 
 .column-inner-left {
@@ -222,7 +227,7 @@ h1 {
 }
 
 .project-detail {
-    padding: 10px;
+    padding: 15px;
 }
 
 .project-detail-inside-box-left, .project-detail-inside-box-right {
@@ -231,10 +236,18 @@ h1 {
     border-radius: 15px;
     background: lightgoldenrodyellow;
     box-shadow: -10px 0px 10px 1px #aaaaaa;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.project-detail-inside-box-left h5, .project-detail-inside-box-left p, .project-detail-inside-box-right p {
-    padding: 0 10px 0 10px;
+.project-detail-inside-box-right {
+    padding: 10px 0;
+}
+
+.text-box {
+    padding: 20px 0 0 10px;
 }
 
 .project-detail-inside-box-left p, .project-detail-inside-box-right p {
@@ -244,15 +257,15 @@ h1 {
 
 .project-detail-inside-box-left h5 {
     font-size: 1em;
-    padding-top: 20px;
 }
 
-.project-detail-inside-box-right-sidebar h5 {
-    padding-left: 10px;
-}
 
 .top-header-box-right {
-    padding-top: 15px;
+    padding-right: 15px;
+}
+
+.text-box-right {
+    padding: 0 0 0 10px;
 }
 
 .text-box-right h5 {
@@ -275,3 +288,93 @@ h1 {
     width: 15px;
 }
 
+.notifications-box-bottom {
+    margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 950px) {
+
+    .container {
+        grid-template-columns: 15% 85%;
+    }
+
+    .main-panel-left {
+        padding: 3%;
+    }
+
+    .main-panel-right {
+        grid-template-rows: 15% 85%;
+    }
+
+    .left-inner-panel-middle {
+        align-items: center;
+    }
+
+    .left-inner-panel-main img, .left-inner-panel-submenu img {
+        margin: 0 auto;
+    }
+
+    .left-panel-text, .top-bar-right-text, .greetings-area {
+        display: none;
+    }
+
+    .right-inner-panel-top {
+        grid-template-rows: 50% 50%;
+    }
+
+    .right-inner-panel-bottom {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .right-inner-panel-row, .right-inner-panel-row-bottom {
+        display: flex;
+        justify-content: center;
+    }
+
+    .notifications-box {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .profile-area, .search-bar-area {
+        padding: 15px;
+    }
+
+    .buttons-area {
+        width: 100%;
+    }
+
+    .buttons-area button {
+        width: 20%;
+        height: 50%;
+    }
+    
+    .column-inner-left {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .column-inner-left h1 {
+        padding-top: 25px;
+    }
+
+    .project-detail {
+        padding: 20px;
+    }
+
+    .incons-area-box {
+        padding-bottom: 10px;
+    }
+
+    .main-panel-right {
+        overflow: auto;
+    }
+
+    .column-inner-right {
+        gap: 15px;
+    }
+
+}
