@@ -278,9 +278,9 @@ h1 {
 }
 
 .incons-area-box {
-    padding: 10px 30px 0 0;
+    padding: 10px 0;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     gap: 10px;
 }
 
@@ -363,10 +363,6 @@ h1 {
 
     .project-detail {
         padding: 20px;
-    }
-
-    .incons-area-box {
-        padding-bottom: 10px;
     }
 
     .main-panel-right {
